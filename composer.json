@@ -1,0 +1,39 @@
+{
+    "name": "omnipay/cloudbanking",
+    "type": "library",
+    "description": "CloudBanking driver for the Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment",
+        "cloudbanking"
+    ],
+    "homepage": "https://github.com/thephpleague/omnipay-cloudbanking",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cloudbanking",
+            "email": "admin@cloudbanking.com.au"
+        },
+        {
+            "name": "Omnipay Contributors",
+            "homepage": "https://github.com/thephpleague/omnipay-cloudbanking/contributors"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\CloudBanking\\" : "src/" }
+    },
+    "require": {
+        "omnipay/common": "~2.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}
