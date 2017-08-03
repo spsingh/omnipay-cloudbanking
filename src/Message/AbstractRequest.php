@@ -212,7 +212,9 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      * {@inheritdoc}
      */
     public function sendData($data)
-    {
+    {   
+        $card = $this->getCard();
+        $card->validate();
         $data['authkey'] = $this->getAuthkey();
         if ($this->getCustomerReference()) {
             $data['customerid'] = $this->getCustomerReference();

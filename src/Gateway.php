@@ -200,24 +200,6 @@ class Gateway extends AbstractGateway
         return $this->setParameter('headers', $value);
     }
 
-    /**
-     * @return string
-     */
-    public function getRequestId()
-    {
-        return $this->requestId;
-    }
-
-    /**
-     * Set request id
-     *
-     * @return AbstractRequest provides a fluent interface.
-     */
-    public function setRequestId($requestId)
-    {
-        $this->requestId = $requestId;
-    }
-
     //
     // Cards
     // @link https://api.cloudbanking.com.au/methods#methods-card
