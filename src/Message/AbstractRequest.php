@@ -159,7 +159,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      */
      protected function createClientRequest($data, array $headers = null)
     {
-        // Stripe only accepts TLS >= v1.2, so make sure Curl is told
         $config                          = $this->httpClient->getConfig();
         $curlOptions                     = $config->get('curl.options');
         $curlOptions[CURLOPT_SSLVERSION] = 6;

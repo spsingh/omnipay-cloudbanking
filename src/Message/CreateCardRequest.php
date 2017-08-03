@@ -56,7 +56,7 @@ namespace Omnipay\CloudBanking\Message;
  * </code>
  *
  * @see CreateCustomerRequest
- * @link https://api.cloudbanking.com.au/methods#methods-card
+ * @link https://api.cloudbanking.com.au/methods#method-card-add
  */
 class CreateCardRequest extends AbstractRequest
 {   
