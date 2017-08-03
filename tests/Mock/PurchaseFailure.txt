@@ -1,0 +1,40 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, DELETE
+Access-Control-Allow-Origin: *
+Cache-Control: no-store, no-cache, must-revalidate
+Connection: Keep-Alive
+Content-Type: application/json; charset=UTF-8
+Date: Thu, 03 Aug 2017 09:45:23 GMT
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Keep-Alive: timeout=5, max=100
+Pragma: no-cache
+Server: Apache
+Transfer-Encoding: chunked
+X-CloudBanking-Message: Card token not found in vault.
+
+{
+    "success": 0,
+    "message": "Card token not found in vault.",
+    "trxresult": 0,
+    "responsecode": "",
+    "banktransactionid": "",
+    "transactionamount": "500.00",
+    "transactionvalue": "454.55",
+    "transactionvaluetax": "45.45",
+    "transactionvaluetotal": "500.00",
+    "transactionfees": "0.00",
+    "transactionfeetax": "0.00",
+    "transactionfeetotal": "0.00",
+    "transactionsubtotal": "454.55",
+    "transactiontax": "45.45",
+    "transactiontotal": "500.00",
+    "customerid": "softdev",
+    "cardtoken": "86b7-9818-7c67-f4e",
+    "cardpan": "",
+    "cardexpiry": "",
+    "settlementdate": "",
+    "smssent": 0,
+    "smsmessage": "",
+    "emailsent": 0,
+    "emailmessage": ""
+}

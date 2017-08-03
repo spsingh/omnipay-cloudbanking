@@ -1,0 +1,45 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, DELETE
+Access-Control-Allow-Origin: *
+Cache-Control: no-store, no-cache, must-revalidate
+Connection: Keep-Alive
+Content-Type: application/json; charset=UTF-8
+Date: Thu, 03 Aug 2017 09:44:08 GMT
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Keep-Alive: timeout=5, max=100
+Pragma: no-cache
+Server: Apache
+Transfer-Encoding: chunked
+X-CloudBanking-BankTransactionID: 346378
+X-CloudBanking-Message: Approved
+X-CloudBanking-ResponseCode: 00
+X-CloudBanking-Success: 1
+X-CloudBanking-TrxResult: 1
+
+{
+    "success": 1,
+    "message": "Approved",
+    "trxresult": 1,
+    "responsecode": "00",
+    "banktransactionid": "346387",
+    "transactionamount": "500.00",
+    "transactionvalue": "454.55",
+    "transactionvaluetax": "45.45",
+    "transactionvaluetotal": "500.00",
+    "transactionfees": "0.00",
+    "transactionfeetax": "0.00",
+    "transactionfeetotal": "0.00",
+    "transactionsubtotal": "454.55",
+    "transactiontax": "45.45",
+    "transactiontotal": "500.00",
+    "currency": "AUD",
+    "customerid": "softdev",
+    "cardtoken": "d142-f7e2-e8c7-b426",
+    "cardpan": "1111",
+    "cardexpiry": "10/2021",
+    "settlementdate": "2017-08-03",
+    "smssent": 0,
+    "smsmessage": "Account not configured to send SMS or you are using a test account.",
+    "emailsent": 1,
+    "emailmessage": ""
+}

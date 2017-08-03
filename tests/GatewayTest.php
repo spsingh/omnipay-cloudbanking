@@ -61,4 +61,11 @@ class GatewayTest extends GatewayTestCase
         $this->assertInstanceOf('Omnipay\CloudBanking\Message\CreateCardRequest', $request);
         $this->assertArrayHasKey('Content-Type', $this->gateway->getHeaders());
     }
+
+    public function testPurchase()
+    {
+        $request = $this->gateway->purchase(array('amount' => '10.00'));
+        $this->assertInstanceOf('Omnipay\CloudBanking\Message\PurchaseRequest', $request);
+        $this->assertSame('10.00', $request->getAmount());
+    }
 }

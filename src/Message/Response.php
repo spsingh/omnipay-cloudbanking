@@ -58,6 +58,45 @@ class Response extends AbstractResponse
         }
         return null;
     }
+    
+    /**
+     * Get a transaction reference, for createCard or createCustomer requests.
+     *
+     * @return string|null
+     */
+    public function getTransactionReference()
+    {
+        if ($this->isSuccessful()) {
+            return $this->data['banktransactionid'];
+        }
+        return null;
+    }
+    
+     /**
+     * Get Token.
+     *
+     * @return string|null
+     */
+    public function getToken()
+    {
+        if ($this->isSuccessful()) {
+            return $this->data['cardtoken'];
+        }
+        return null;
+    }
+
+      /**
+     * Get Amount.
+     *
+     * @return string|null
+     */
+    public function getAmount()
+    {
+        if ($this->isSuccessful()) {
+            return $this->data['transactionamount'];
+        }
+        return null;
+    }
 
     /**
      * Get the error message from the response.

@@ -256,6 +256,33 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\CloudBanking\Message\DeleteCardRequest', $parameters);
     }
+
+    /**
+     * Purchase request.
+     *
+     * To charge a credit card, you create a new charge object. If your API key
+     * is in test mode, the supplied card won't actually be charged, though
+     * everything else will occur as if in live mode. (Stripe assumes that the
+     * charge would have completed successfully).
+     *
+     * Either a customerReference or a card is required.  If a customerReference
+     * is passed in then the cardReference must be the reference of a card
+     * assigned to the customer.  Otherwise, if you do not pass a customer ID,
+     * the card you provide must either be a token, like the ones returned by
+     * Stripe.js, or a dictionary containing a user's credit card details.
+     *
+     * IN OTHER WORDS: You cannot just pass a card reference into this request,
+     * you must also provide a customer reference if you want to use a stored
+     * card.
+     *
+     * @param array $parameters
+     *
+     * @return \Omnipay\Stripe\Message\PurchaseRequest
+     */
+    public function purchase(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\CloudBanking\Message\PurchaseRequest', $parameters);
+    }
     
     /**
      * Fetch Customer.

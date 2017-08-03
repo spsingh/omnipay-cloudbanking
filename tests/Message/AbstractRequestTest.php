@@ -12,7 +12,7 @@ class AbstractRequestTest extends TestCase
         $this->request = Mockery::mock('\Omnipay\CloudBanking\Message\AbstractRequest')->makePartial();
         $this->request->initialize();
     }
-
+    
     public function testCardReference()
     {
         $this->assertSame($this->request, $this->request->setCardReference('abc123'));
