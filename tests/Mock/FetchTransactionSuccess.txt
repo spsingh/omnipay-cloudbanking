@@ -1,0 +1,35 @@
+HTTP/1.1 200 OK 
+Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, DELETE
+Access-Control-Allow-Origin: *
+Cache-Control: no-store, no-cache, must-revalidate
+Connection: Keep-Alive
+Content-Type: application/json; charset=UTF-8
+Date: Thu, 03 Aug 2017 11:44:40 GMT
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Keep-Alive: timeout=5, max=100
+Pragma: no-cache
+Server: Apache
+Transfer-Encoding: chunked
+X-CloudBanking-BankTransactionID: 346387
+X-CloudBanking-Message: Transaction Found.
+X-CloudBanking-ResponseCode: 00
+X-CloudBanking-Success: 1
+X-CloudBanking-TrxResult: 1
+
+{
+    "success": 1,
+    "message": "Transaction Found.",
+    "trxresult": "1",
+    "responsecode": "00",
+    "banktransactionid": "346387",
+    "transactiontime": "1501755498",
+    "transactiondate": "2017-08-03",
+    "transactionamount": "500.00",
+    "transactionfees": "0.00",
+    "transactiontotal": "500.00",
+    "customerid": "softdev",
+    "cardtoken": "d142-f7e2-e8c7-b426",
+    "smssent": "0",
+    "emailsent": "0",
+    "customfieldname": "custom field name"
+}

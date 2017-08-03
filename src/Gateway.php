@@ -277,7 +277,7 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\PurchaseRequest
+     * @return \Omnipay\CloudBanking\Message\PurchaseRequest
      */
     public function purchase(array $parameters = array())
     {
@@ -323,5 +323,15 @@ class Gateway extends AbstractGateway
     public function customerBalance(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\CloudBanking\Message\CustomerBalanceRequest', $parameters);
+    }
+    
+    /**
+     * @param array $parameters
+     *
+     * @return \Omnipay\CloudBanking\Message\FetchTransactionRequest
+     */
+    public function fetchTransaction(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\CloudBanking\Message\FetchTransactionRequest', $parameters);
     }
 }

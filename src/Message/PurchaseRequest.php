@@ -321,6 +321,9 @@ class PurchaseRequest extends AbstractRequest
         return $this->setParameter('customfields', $value);
     }
 
+    /*
+    Get End Point 
+    */
     public function getEndpoint()
     {
         // Create a new transaction. 

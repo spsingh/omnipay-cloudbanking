@@ -1,0 +1,30 @@
+HTTP/1.1 200 OK 
+Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, DELETE
+Access-Control-Allow-Origin: *
+Cache-Control: no-store, no-cache, must-revalidate
+Connection: Keep-Alive
+Content-Type: application/json; charset=UTF-8
+Date: Thu, 03 Aug 2017 12:15:32 GMT
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Keep-Alive: timeout=5, max=100
+Pragma: no-cache
+Server: Apache
+Transfer-Encoding: chunked
+X-CloudBanking-Message: There was no transaction found matching your details.
+
+{
+    "success": 0,
+    "message": "There was no transaction found matching your details.",
+    "trxresult": "",
+    "responsecode": "",
+    "banktransactionid": "",
+    "transactiontime": "",
+    "transactiondate": "",
+    "transactionamount": "0.00",
+    "transactionfees": "0.00",
+    "transactiontotal": "0.00",
+    "customerid": "softdevd",
+    "cardtoken": "",
+    "smssent": "",
+    "emailsent": ""
+}
