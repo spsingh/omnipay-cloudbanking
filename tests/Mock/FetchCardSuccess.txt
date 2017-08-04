@@ -1,0 +1,44 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, DELETE
+Access-Control-Allow-Origin: *
+Cache-Control: no-store, no-cache, must-revalidate
+Connection: Keep-Alive
+Content-Type: application/json; charset=UTF-8
+Date: Wed, 02 Aug 2017 07:42:45 GMT
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Keep-Alive: timeout=5, max=100
+Pragma: no-cache
+Server: Apache
+Transfer-Encoding: chunked
+X-CloudBanking-Message: The card has been saved for the customer.
+X-CloudBanking-Success: 1
+
+{
+    "success": 1,
+    "message": "Customer Cards Found",
+    "customerid": "athenasofttestdev",
+    "customer": null,
+    "cardtokens": [
+        {
+            "cardtoken": "3804-ff51-7c67-89eb",
+            "cardpan": "1111",
+            "cardexp": "10/2021",
+            "cardlabel": "",
+            "authkey": "tm5b5607c17b6fdb6318e0a1984bd722ce5ab569377e6c8f4e840ef86febd50851597ff4187a44b"
+        },
+        {
+            "cardtoken": "d729-9818-e8c7-dd79",
+            "cardpan": "1111",
+            "cardexp": "10/2021",
+            "cardlabel": "",
+            "authkey": "tm5b5607c17b6fdb6318e0a1984bd722ce5ab569377e6c8f4e840ef86febd5085159818267b5218"
+        },
+        {
+            "cardtoken": "1dea-fb94-5e8c-0d64",
+            "cardpan": "1111",
+            "cardexp": "10/2021",
+            "cardlabel": "",
+            "authkey": "tm5b5607c17b6fdb6318e0a1984bd722ce5ab569377e6c8f4e840ef86febd508515982fb1a230e0"
+        }
+    ]
+}

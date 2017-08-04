@@ -24,6 +24,35 @@ class GatewayTest extends GatewayTestCase
         $this->assertSame('foo', $request->getDescription());
     }
 
+    public function testDeleteCard()
+    {
+        $request = $this->gateway->createCard(array('description' => 'foo'));
+
+        $this->assertInstanceOf('Omnipay\CloudBanking\Message\CreateCardRequest', $request);
+        $this->assertSame('foo', $request->getDescription());
+    }
+
+    public function testFetchCustomer()
+    {
+        $request = $this->gateway->fetchCustomer(array('description' => 'foo'));
+        $this->assertInstanceOf('Omnipay\CloudBanking\Message\FetchCustomerRequest', $request);
+        $this->assertSame('foo', $request->getDescription());
+    }
+
+     public function testFetchCard()
+    {
+        $request = $this->gateway->fetchCard(array('description' => 'foo'));
+        $this->assertInstanceOf('Omnipay\CloudBanking\Message\FetchCardRequest', $request);
+        $this->assertSame('foo', $request->getDescription());
+    }
+
+     public function testCustomerBalance()
+    {
+        $request = $this->gateway->customerBalance(array('description' => 'foo'));
+        $this->assertInstanceOf('Omnipay\CloudBanking\Message\CustomerBalanceRequest', $request);
+        $this->assertSame('foo', $request->getDescription());
+    }
+
     public function testHttpHeaders()
     {
         $this->gateway->setHeaders(array('Content-Type' => 'application/json; charset=UTF-8'));

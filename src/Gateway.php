@@ -257,4 +257,44 @@ class Gateway extends AbstractGateway
         return $this->createRequest('\Omnipay\CloudBanking\Message\DeleteCardRequest', $parameters);
     }
     
+    /**
+     * Fetch Customer.
+     *
+     * Fetches customer by customer reference.
+     *
+     * @param array $parameters
+     *
+     * @return \Omnipay\CloudBanking\Message\FetchCustomerRequest
+     */
+    public function fetchCustomer(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\CloudBanking\Message\FetchCustomerRequest', $parameters);
+    }
+    
+    /**
+     * Fetch Card.
+     *
+     * Fetches Card by customer reference.
+     *
+     * @param array $parameters
+     *
+     * @return \Omnipay\CloudBanking\Message\FetchCardRequest
+     */
+    public function fetchCard(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\CloudBanking\Message\FetchCardRequest', $parameters);
+    }
+
+    /**
+     * Fetch Customer Balance.
+     *
+     *
+     * @param array $parameters
+     *
+     * @return \Omnipay\CloudBanking\Message\CustomerBalanceRequest
+     */
+    public function customerBalance(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\CloudBanking\Message\CustomerBalanceRequest', $parameters);
+    }
 }

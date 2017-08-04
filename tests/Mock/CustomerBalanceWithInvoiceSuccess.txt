@@ -1,0 +1,25 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, DELETE
+Access-Control-Allow-Origin: *
+Cache-Control: no-store, no-cache, must-revalidate
+Connection: Keep-Alive
+Content-Type: application/json; charset=UTF-8
+Date: Wed, 02 Aug 2017 07:42:45 GMT
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Keep-Alive: timeout=5, max=100
+Pragma: no-cache
+Server: Apache
+Transfer-Encoding: chunked
+X-CloudBanking-Message: Customer Balance Retrieved.
+X-CloudBanking-Success: 1
+
+{
+	"success": 1,
+	"message": "No Invoices owing for Customer.",
+	"customerid": "customer123",
+	"customer": {
+		"customername": "Joe Cloudly",
+		"customeremail": "joe@cloudbanking.com.au"
+	},
+	"balance": 0.00
+}
