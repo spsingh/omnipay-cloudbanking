@@ -334,4 +334,21 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\CloudBanking\Message\FetchTransactionRequest', $parameters);
     }
+    /**
+     * Refund Request.
+     *
+     * Creating a new refund will refund a charge that has
+     * previously been created but not yet refunded. Funds will
+     * be refunded to the credit or debit card that was originally
+     * charged. The fees you were originally charged are also
+     * refunded.
+     *
+     * @param array $parameters
+     *
+     * @return \Omnipay\CloudBanking\Message\RefundRequest
+     */
+    public function refund(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\CloudBanking\Message\RefundRequest', $parameters);
+    }
 }

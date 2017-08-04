@@ -20,50 +20,50 @@ class PurchaseRequestTest extends TestCase
 
     public function testRefnumber()
     {
-        $this->assertSame($this->request,$this->request->setRefnumber('45546'));
-        $this->assertSame('45546',$this->request->getRefnumber());     
+        $this->assertSame($this->request, $this->request->setRefnumber('45546'));
+        $this->assertSame('45546', $this->request->getRefnumber());     
     }
 
     public function testSmssend()
     {
-        $this->assertSame($this->request,$this->request->setSmssend(1));
-        $this->assertSame(1,$this->request->getSmssend());     
+        $this->assertSame($this->request, $this->request->setSmssend(1));
+        $this->assertSame(1, $this->request->getSmssend());     
     }
 
     public function testSmsnumberto()
     {
-        $this->assertSame($this->request,$this->request->setSmsnumberto('99999'));
-        $this->assertSame('99999',$this->request->getSmsnumberto());     
+        $this->assertSame($this->request, $this->request->setSmsnumberto('99999'));
+        $this->assertSame('99999', $this->request->getSmsnumberto());     
     }
 
     public function testSmsmessage()
     {
-        $this->assertSame($this->request,$this->request->setSmsmessage('hi'));
-        $this->assertSame('hi',$this->request->getSmsmessage());     
+        $this->assertSame($this->request, $this->request->setSmsmessage('hi'));
+        $this->assertSame('hi', $this->request->getSmsmessage());     
     }
 
     public function testEmailsend()
     {
-        $this->assertSame($this->request,$this->request->setEmailsend(1));
-        $this->assertSame(1,$this->request->getEmailsend());     
+        $this->assertSame($this->request, $this->request->setEmailsend(1));
+        $this->assertSame(1, $this->request->getEmailsend());     
     }
 
     public function testEmailaddressto()
     {
-        $this->assertSame($this->request,$this->request->setEmailaddressto('abc@xyz.com'));
-        $this->assertSame('abc@xyz.com',$this->request->getEmailaddressto());     
+        $this->assertSame($this->request, $this->request->setEmailaddressto('abc@xyz.com'));
+        $this->assertSame('abc@xyz.com', $this->request->getEmailaddressto());     
     }
 
     public function testEmailaddressfrom()
     {
-        $this->assertSame($this->request,$this->request->setEmailaddressfrom('abc@xyz.com'));
-        $this->assertSame('abc@xyz.com',$this->request->getEmailaddressfrom());     
+        $this->assertSame($this->request, $this->request->setEmailaddressfrom('abc@xyz.com'));
+        $this->assertSame('abc@xyz.com', $this->request->getEmailaddressfrom());     
     }
 
     public function testEmailsubject()
     {
-        $this->assertSame($this->request,$this->request->setEmailsubject('greetings'));
-        $this->assertSame('greetings',$this->request->getEmailsubject());     
+        $this->assertSame($this->request, $this->request->setEmailsubject('greetings'));
+        $this->assertSame('greetings', $this->request->getEmailsubject());     
     }
 
     public function testEmailmessage()

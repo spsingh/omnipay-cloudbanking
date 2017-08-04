@@ -55,7 +55,6 @@ class CreateCardRequestTest extends TestCase
 
         $this->assertTrue($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        // $this->assertNull($response->getTransactionReference());
         $this->assertSame('athenasofttestdev', $response->getCustomerReference());
         $this->assertSame('d729-9818-e8c7-dd79', $response->getCardReference());
         $this->assertNull($response->getMessage());
@@ -79,7 +78,6 @@ class CreateCardRequestTest extends TestCase
 
         $this->assertFalse($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        // $this->assertNull($response->getTransactionReference());
         $this->assertNull($response->getCardReference());
         $this->assertSame('Card Number missing.<br />Card Expiry missing.<br />The card number seems to be empty.<br />Card type not found.', $response->getMessage());
     }

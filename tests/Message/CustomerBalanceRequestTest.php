@@ -37,7 +37,6 @@ class CustomerBalanceRequestTest extends TestCase
 
         $this->assertTrue($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertNull($response->getTransactionReference());
         $this->assertNull($response->getMessage());
     }
 
@@ -49,7 +48,6 @@ class CustomerBalanceRequestTest extends TestCase
 
         $this->assertTrue($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertNull($response->getTransactionReference());
         $this->assertNull($response->getMessage());
     }
 
@@ -61,7 +59,6 @@ class CustomerBalanceRequestTest extends TestCase
 
         $this->assertFalse($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertNull($response->getTransactionReference());
         $this->assertSame('No customer found with that ID.', $response->getMessage());
     }
 }

@@ -1,0 +1,31 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, DELETE
+Access-Control-Allow-Origin: *
+Cache-Control: no-store, no-cache, must-revalidate
+Connection: Keep-Alive
+Content-Type: application/json; charset=UTF-8
+Date: Fri, 04 Aug 2017 03:44:50 GMT
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Keep-Alive: timeout=5, max=100
+Pragma: no-cache
+Server: Apache
+Transfer-Encoding: chunked
+X-CloudBanking-Message: No valid transaction found to refund.
+X-CloudBanking-RefundTransactionID: 
+
+{
+    "success": 0,
+    "message": "No valid transaction found to refund.",
+    "customerid": "softdevd",
+    "cardtoken": "d142-f7e2-e8c7-b426",
+    "banktransactionid": "",
+    "transactiontime": "",
+    "transactiondate": "",
+    "transactionamount": 0,
+    "transactionfees": 0,
+    "transactiontax": 0,
+    "transactiontotal": 0,
+    "amountrefunded": 0,
+    "bankrefundid": "",
+    "refunddate": ""
+}

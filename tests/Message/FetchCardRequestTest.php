@@ -37,7 +37,6 @@ class FetchCardRequestTest extends TestCase
         $response = $this->request->send();
         $this->assertTrue($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertNull($response->getTransactionReference());
         $this->assertNull($response->getMessage());
     }
 
