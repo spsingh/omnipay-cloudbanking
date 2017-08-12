@@ -75,8 +75,8 @@ class PurchaseRequest extends AbstractRequest
     {
         $data = array();
 
-        if ($this->getToken()) {
-            $data['cardtoken'] = $this->getToken();
+        if ($this->getCardReference()) {
+            $data['cardtoken'] = $this->getCardReference();
         }
         else {
             $this->validate('token');
@@ -90,7 +90,7 @@ class PurchaseRequest extends AbstractRequest
         }
 
         $data['addfees'] = $this->getAddfees();
-        $data['refnumber'] = $this->getRefnumber();
+        $data['refnumber'] = $this->getTransactionId();
         $data['smssend'] = $this->getSmssend();
         $data['smsnumberto'] = $this->getSmsnumberto();
         $data['smsmessage'] = $this->getSmsmessage();

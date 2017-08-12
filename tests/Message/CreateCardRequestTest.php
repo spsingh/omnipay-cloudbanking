@@ -15,14 +15,6 @@ class CreateCardRequestTest extends TestCase
         $data = $this->request->getData();
     }
 
-    public function testDataWithCardReference()
-    {
-        $this->request->setCustomerReference('xyz');
-        $data = $this->request->getData()['cardtoken'];
-
-        $this->assertSame('xyz', $data);
-    }
-
     public function testDataWithCard()
     {
         $card = $this->getValidCard();

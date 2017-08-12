@@ -67,7 +67,7 @@ class CreateCardRequest extends AbstractRequest
         if ($this->getCard()) {
             $card = $this->getCard();
             $card->validate();
-            $data['cardtoken'] = $this->getCustomerReference();
+            $data['cardtoken'] = $this->getToken();
             $data['cardname'] = $card->getName();
             $data['cardnumber'] = $card->getNumber();
             $data['cardexpiry'] = $card->getExpiryDate('mm/yy');

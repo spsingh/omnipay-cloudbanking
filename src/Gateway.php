@@ -109,7 +109,8 @@ class Gateway extends AbstractGateway
     {
         return array(
             'authkey' => '',
-            'apiVersion' => 2
+            'apiVersion' => 2,
+            'customerReference' => '',
         );
     }
 
@@ -198,6 +199,29 @@ class Gateway extends AbstractGateway
     public function setHeaders($value)
     {
         return $this->setParameter('headers', $value);
+    }
+
+    /**
+     * Get the customer reference.
+     *
+     * @return string
+     */
+    public function getCustomerReference()
+    {
+        return $this->getParameter('customerReference');
+    }
+
+    /**
+     * Set the customer reference.
+     *
+     * Used when calling CreateCard on an existing customer.  If this
+     * parameter is not set then a new customer is created.
+     *
+     * @return AbstractRequest provides a fluent interface.
+     */
+    public function setCustomerReference($value)
+    {
+        return $this->setParameter('customerReference', $value);
     }
 
     //
