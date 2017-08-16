@@ -27,15 +27,14 @@ namespace Omnipay\CloudBanking\Message;
  */
 class CustomerBalanceRequest extends AbstractRequest
 {
-     public function getData()
+    public function getData()
     {
         $data = array();
 
         if ($this->getCard()) {
             $card = $this->getCard();
             $card->validate();
-        }
-        else {
+        } else {
             // one of token or card is required
             $this->validate('card');
         }

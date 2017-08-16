@@ -11,7 +11,7 @@ namespace Omnipay\CloudBanking\Message;
  *
  * @link https://api.cloudbanking.com.au/methods#method-customer-get
  */
-class FetchCardRequest extends  AbstractRequest
+class FetchCardRequest extends AbstractRequest
 {
     public function getData()
     {
@@ -20,15 +20,15 @@ class FetchCardRequest extends  AbstractRequest
         if ($this->getCard()) {
             $card = $this->getCard();
             $card->validate();
-        }
-        else {
+        } else {
             // one of token or card is required
             $this->validate('card');
         }
 
         return $data;
     }
-
+    /**
+    */
     public function getEndpoint()
     {
         // To Get a card

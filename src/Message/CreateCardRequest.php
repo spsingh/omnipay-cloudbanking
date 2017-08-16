@@ -59,7 +59,7 @@ namespace Omnipay\CloudBanking\Message;
  * @link https://api.cloudbanking.com.au/methods#method-card-add
  */
 class CreateCardRequest extends AbstractRequest
-{   
+{
     public function getData()
     {
         $data = array();
@@ -74,20 +74,17 @@ class CreateCardRequest extends AbstractRequest
             $data['cardcvv'] = $card->getCvv();
             $data['cardlabel'] = $this->getCardNickname();
             $data = array_merge($data, $this->getCardData());
-        }
-        else {
+        } else {
             // one of token or card is required
             $this->validate('card');
         }
-
         return $data;
     }
-    /*
-    Get End Point 
+    /**
     */
     public function getEndpoint()
     {
-        // Create a new card 
+        // Create a new card
         return $this->getEndpointWithVersion().'/card/add';
     }
 }

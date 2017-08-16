@@ -77,15 +77,13 @@ class PurchaseRequest extends AbstractRequest
 
         if ($this->getCardReference()) {
             $data['cardtoken'] = $this->getCardReference();
-        }
-        else {
+        } else {
             $this->validate('token');
         }
 
         if ($this->getAmount()) {
             $data['transactionamount'] = $this->getAmount();
-        }
-        else {
+        } else {
             $this->validate('amount');
         }
 
@@ -104,7 +102,6 @@ class PurchaseRequest extends AbstractRequest
         }
         return $data;
     }
-
      /**
      * @return int
      */
@@ -113,7 +110,9 @@ class PurchaseRequest extends AbstractRequest
         return $this->getParameter('addfees');
     }
 
-     /**
+    /**
+     * Set the AddFees.
+     *
      * @return int
      */
     public function setAddfees($value)
@@ -321,12 +320,11 @@ class PurchaseRequest extends AbstractRequest
         return $this->setParameter('customfields', $value);
     }
 
-    /*
-    Get End Point 
+    /** Get End Point 
     */
     public function getEndpoint()
     {
-        // Create a new transaction. 
+        // Create a new transaction.
         return $this->getEndpointWithVersion().'/transaction/process';
-    }   
+    }
 }

@@ -157,24 +157,13 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      *
      * @return \Guzzle\Http\Message\RequestInterface
      */
-     protected function createClientRequest($data, array $headers = null)
+    protected function createClientRequest($data, array $headers = null)
     {
         $config                          = $this->httpClient->getConfig();
         $curlOptions                     = $config->get('curl.options');
         $curlOptions[CURLOPT_SSLVERSION] = 6;
         $config->set('curl.options', $curlOptions);
         $this->httpClient->setConfig($config);
-
-        // TODO: fix code coverage, don't throw exceptions for 4xx errors
-        // $this->httpClient->getEventDispatcher()->addListener(
-        //     'request.error',
-        //     function ($event) {
-        //         if ($event['response']->isClientError()) {
-        //             $event->stopPropagation();
-        //         }
-        //     }
-        // );
-
         $httpRequest = $this->httpClient->createRequest(
             $this->getHttpMethod(),
             $this->getEndpoint(),
@@ -184,7 +173,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
         return $httpRequest;
     }
-
+    
     /**
      * @return array
      */
@@ -206,19 +195,18 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     {
         return $this->setParameter('headers', $value);
     }
-
-    /**
+    
+     /**
      * {@inheritdoc}
      */
     public function sendData($data)
-    {   
+    {
         $card = $this->getCard();
         $card->validate();
         $data['authkey'] = $this->getAuthkey();
         if ($this->getCustomerReference()) {
             $data['customerid'] = $this->getCustomerReference();
-        }
-        else {
+        } else {
             $this->validate('customerReference');
         }
 

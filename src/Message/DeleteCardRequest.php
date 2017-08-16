@@ -34,7 +34,7 @@ namespace Omnipay\CloudBanking\Message;
  */
 class DeleteCardRequest extends AbstractRequest
 {
-     public function getData()
+    public function getData()
     {
         $data = array();
 
@@ -43,18 +43,18 @@ class DeleteCardRequest extends AbstractRequest
             $card->validate();
             $data['cardtoken'] = $this->getCustomerReference();
             $data['customerid'] = $this->getCustomerReference();
-        }
-        else {
+        } else {
             // one of token or card is required
             $this->validate('card');
         }
 
         return $data;
     }
-
+    /**
+    */
     public function getEndpoint()
     {
-        // To Delete a Card  
+        // To Delete a Card
         return $this->getEndpointWithVersion().'/card/remove';
     }
 }

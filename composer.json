@@ -23,7 +23,7 @@
         }
     ],
     "autoload": {
-        "psr-4": { "Omnipay\\CloudBanking\\" : "src/" }
+        "psr-4": { "CloudBanking\\Omnipay-CloudBanking\\" : "src/" }
     },
     "require": {
         "omnipay/common": "~2.0"

@@ -107,7 +107,7 @@ class Response extends AbstractResponse
      */
     public function getMessage()
     {
-        if (!$this->isSuccessful()){
+        if (!$this->isSuccessful()) {
             return $this->data['message'];
         }
 

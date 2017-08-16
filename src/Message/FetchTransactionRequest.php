@@ -27,7 +27,7 @@ namespace Omnipay\CloudBanking\Message;
  */
 class FetchTransactionRequest extends AbstractRequest
 {
-   public function getData()
+    public function getData()
     {
         $data = array();
 
@@ -35,10 +35,9 @@ class FetchTransactionRequest extends AbstractRequest
             $card = $this->getCard();
             $card->validate();
             $data['cardtoken'] = $this->getCustomerReference();
-            $data['refnumber'] = $this->getRefnumber();;
+            $data['refnumber'] = $this->getRefnumber();
             $data['banktransactionid'] = $this->getBanktransactionid();
-        }
-        else {
+        } else {
             // one of token or card is required
             $this->validate('card');
         }
@@ -87,12 +86,11 @@ class FetchTransactionRequest extends AbstractRequest
     }
     /*
     Get End Point 
-    */  
+    */
     public function getEndpoint()
     {
-        // Create a new transaction. 
         return $this->getEndpointWithVersion().'/transaction/find';
-    }   
+    }
     
     public function getHttpMethod()
     {

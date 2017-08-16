@@ -39,26 +39,24 @@ class RefundRequest extends AbstractRequest
 
         if ($this->getToken()) {
             $data['cardtoken'] = $this->getToken();
-        }
-        else {
+        } else {
             $this->validate('token');
         }
 
         if ($this->getTransactionReference()) {
             $data['banktransactionid'] = $this->getTransactionReference();
-        }
-        else {
+        } else {
             $this->validate('transactionReference');
         }
         return $data;
     }
 
-   /*
+    /*
     Get End Point 
-    */  
+    */
     public function getEndpoint()
     {
-        // Create a new transaction. 
+        // Create a new transaction.
         return $this->getEndpointWithVersion().'/transaction/refund';
-    }   
+    }
 }

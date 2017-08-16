@@ -21,8 +21,7 @@ class FetchCustomerRequest extends AbstractRequest
             $card = $this->getCard();
             $card->validate();
             $data['cardname'] = $card->getName();
-        }
-        else {
+        } else {
             // one of token or card is required
             $this->validate('card');
         }
@@ -32,7 +31,7 @@ class FetchCustomerRequest extends AbstractRequest
 
     public function getEndpoint()
     {
-        // To Get a Customer 
+        // To Get a Customer
         return $this->getEndpointWithVersion().'/customer/get';
     }
 }
