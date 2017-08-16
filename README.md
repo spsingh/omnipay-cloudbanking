@@ -17,7 +17,7 @@ to your `composer.json` file:
 ```json
 {
     "require": {
-        "omnipay/cloudbanking": "~2.0"
+        "cloudbanking/omnipay-cloudbanking": "~2.0"
     }
 }
 ```
