@@ -2,9 +2,9 @@
 
 **Cloud Banking driver for the Omnipay PHP payment processing library**
 
-[![Build Status](https://travis-ci.org/thephpleague/omnipay-stripe.png?branch=master)](https://travis-ci.org/thephpleague/omnipay-cloudbanking)
-[![Latest Stable Version](https://poser.pugx.org/omnipay/stripe/version.png)](https://packagist.org/packages/omnipay/cloudbanking)
-[![Total Downloads](https://poser.pugx.org/omnipay/stripe/d/total.png)](https://packagist.org/packages/omnipay/cloudbanking)
+[![Build Status](https://travis-ci.org/cloudbanking/omnipay-cloudbanking.png?branch=master)](https://travis-ci.org/cloudbanking/omnipay-cloudbanking)
+[![Latest Stable Version](https://poser.pugx.org/coudbanking/omnipay-cloudbanking/version.png)](https://packagist.org/packages/cloudbanking/omnipay-cloudbanking)
+[![Total Downloads](https://poser.pugx.org/cloudbanking/omnipay-cloudbanking/d/total.png)](https://packagist.org/packages/omnipay/cloudbanking)
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
 processing library for PHP 5.3+. This package implements Stripe support for Omnipay.
