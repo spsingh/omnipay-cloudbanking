@@ -2,7 +2,7 @@
 
 **Cloud Banking driver for the Omnipay PHP payment processing library**
 
-[![Build Status](https://travis-ci.org/cloudbanking/omnipay-cloudbanking.png?branch=master)](https://travis-ci.org/cloudbanking/omnipay-cloudbanking)
+[![Build Status](https://travis-ci.org/spsingh/omnipay-cloudbanking.png?branch=master)](https://travis-ci.org/spsingh/omnipay-cloudbanking)
 [![Latest Stable Version](https://poser.pugx.org/coudbanking/omnipay-cloudbanking/version.png)](https://packagist.org/packages/cloudbanking/omnipay-cloudbanking)
 [![Total Downloads](https://poser.pugx.org/cloudbanking/omnipay-cloudbanking/d/total.png)](https://packagist.org/packages/omnipay/cloudbanking)
 
