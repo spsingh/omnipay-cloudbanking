@@ -1,5 +1,5 @@
 {
-    "name": "omnipay/cloudbanking",
+    "name": "cloudbanking/omnipay-cloudbanking",
     "type": "library",
     "description": "CloudBanking driver for the Omnipay payment processing library",
     "keywords": [
@@ -10,7 +10,7 @@
         "payment",
         "cloudbanking"
     ],
-    "homepage": "https://github.com/thephpleague/omnipay-cloudbanking",
+    "homepage": "https://github.com/spsingh/omnipay-cloudbanking.git",
     "license": "MIT",
     "authors": [
         {
@@ -19,7 +19,7 @@
         },
         {
             "name": "Omnipay Contributors",
-            "homepage": "https://github.com/thephpleague/omnipay-cloudbanking/contributors"
+            "homepage": "https://github.com/spsingh/omnipay-cloudbanking.git/contributors"
         }
     ],
     "autoload": {
