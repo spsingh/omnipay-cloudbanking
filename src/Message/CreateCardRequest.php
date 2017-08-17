@@ -70,7 +70,7 @@ class CreateCardRequest extends AbstractRequest
             $data['cardtoken'] = $this->getToken();
             $data['cardname'] = $card->getName();
             $data['cardnumber'] = $card->getNumber();
-            $data['cardexpiry'] = $card->getExpiryDate('mm/yy');
+            $data['cardexpiry'] = $card->getExpiryDate('m/y');
             $data['cardcvv'] = $card->getCvv();
             $data['cardlabel'] = $this->getCardNickname();
             $data = array_merge($data, $this->getCardData());
