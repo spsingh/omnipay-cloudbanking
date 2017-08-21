@@ -37,8 +37,8 @@ class RefundRequest extends AbstractRequest
     {
         $data = array();
 
-        if ($this->getToken()) {
-            $data['cardtoken'] = $this->getToken();
+        if ($this->getCardReference()) {
+            $data['cardtoken'] = $this->getCardReference();
         } else {
             $this->validate('token');
         }
