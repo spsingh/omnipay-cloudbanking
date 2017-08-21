@@ -28,6 +28,9 @@ class RefundRequestTest extends TestCase
         $this->assertSame('softdev', $response->getCustomerReference());
         $this->assertSame('d142-f7e2-e8c7-b426', $response->getToken());
         $this->assertNull($response->getMessage());
+        $this->assertSame('105.00', $response->getAmountRefunded());
+        $this->assertSame('refundreceipt456', $response->getRefundId());
+        $this->assertSame('2017-08-01', $response->getRefundDate());
     }
     
     /**
@@ -63,5 +66,8 @@ class RefundRequestTest extends TestCase
         $this->assertNull($response->getCardReference());
         $this->assertNull($response->getToken());
         $this->assertSame('No valid transaction found to refund.', $response->getMessage());
+        $this->assertNull($response->getAmountRefunded());
+        $this->assertNull($response->getRefundId());
+        $this->assertNull($response->getRefundDate());
     }
 }

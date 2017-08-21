@@ -93,6 +93,7 @@ class PurchaseRequestTest extends TestCase
         $this->request->setToken('86b7-9818-7c67-f4ef');
         $this->request->setAmount('500.00');
         $this->request->setCustomerReference('softdev');
+        $this->request->setCardReference('d142-f7e2-e8c7-b426');
         $response = $this->request->send();
         $this->assertTrue($response->isSuccessful());
         $this->assertFalse($response->isRedirect());

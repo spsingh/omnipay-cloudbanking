@@ -113,4 +113,49 @@ class Response extends AbstractResponse
 
         return null;
     }
+
+    /**
+     * Get the amount refunded from the response.
+     *
+     * Returns null if the request was unsuccessful.
+     *
+     * @return string|null
+     */
+    public function getAmountRefunded()
+    {
+        if ($this->isSuccessful()) {
+            return $this->data['amountrefunded'];
+        }
+          return null;
+    }
+
+     /**
+     * Get the refund id from the response.
+     *
+     * Returns null if the request was unsuccessful.
+     *
+     * @return string|null
+     */
+    public function getRefundId()
+    {
+        if ($this->isSuccessful()) {
+            return $this->data['bankrefundid'];
+        }
+          return null;
+    }
+
+    /**
+     * Get the refund date from the response.
+     *
+     * Returns null if the request was unsuccessful.
+     *
+     * @return string|null
+     */
+    public function getRefundDate()
+    {
+        if ($this->isSuccessful()) {
+            return $this->data['refunddate'];
+        }
+        return null;
+    }
 }
